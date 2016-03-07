@@ -2,7 +2,7 @@
 # LPS25HB
 LPS25HB Digital Barometer Altimeter
 
-The SI7021 is a absolute pressure sensor which provide a digital pressure output.
+The LPS25HB is a absolute pressure sensor which provide a digital pressure output.
 
 This Device is available from ControlEverything.com [SKU: LPS25HB_I2CS]
 
@@ -38,4 +38,4 @@ Download (or git pull) the code in pi. Run the program
 $> python LPS25HB.py
 ```
 
-The code output is the digital pressure.
+The code output is the digital pressure value in hPa.
