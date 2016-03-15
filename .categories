@@ -1,3 +1,5 @@
 lang:java
 lang:python
+lang:arduino
+lang:particle
 sku:LPS25HB_I2CS
