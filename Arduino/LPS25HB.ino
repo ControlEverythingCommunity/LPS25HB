@@ -37,7 +37,7 @@ void loop()
   // Stop I2C Transmission
   Wire.endTransmission();
   
-  // Request 2 bytes of data
+  // Request 3 bytes of data
   Wire.requestFrom(Addr, 3);
 
   // Read 3 bytes of data
@@ -59,5 +59,3 @@ void loop()
   Serial.println(" hPa"); 
   delay(1000);
 }
-
-
