@@ -10,7 +10,7 @@
 // LPS25HB I2C address is 0x5C(92)
 #define Addr 0x5C
 
-float pressure = 0;
+double pressure = 0.0;
 void setup()
 {
   // Set variable
@@ -54,7 +54,6 @@ void loop()
     data[1] = Wire.read();
     data[2] = Wire.read();
   }
-  delay (300);
 
   // Convert pressure data
   pressure = ((data[2] * 65536) + (data[1] * 256) + data[0]) / 4096.0;
