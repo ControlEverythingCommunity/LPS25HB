@@ -22,7 +22,8 @@ void main()
 	}
 	// Get I2C device, LPS25HB I2C address is 0x5C(72)
 	ioctl(file, I2C_SLAVE, 0x5C);
-
+	
+	// Select control register(0x20)
 	// Active mode, Continuous Update(0x90)
 	char config[2] = {0};
 	config[0] = 0x20;
@@ -31,13 +32,13 @@ void main()
 	sleep(1);
 
 	// Read 3 bytes of data from register(0x28)
-	// cTemp msb, cTemp lsb
+	// Pressure lsb first
 	char reg[1] = {0x28 | 0x80};
 	write(file, reg, 1);
 	char data[3] = {0};
 	if(read(file, data, 3) != 3)
 	{
-		printf("Erorr : Input/output Erorr \n");
+		printf("Error : Input/Output error \n");
 	}
 	else
 	{
