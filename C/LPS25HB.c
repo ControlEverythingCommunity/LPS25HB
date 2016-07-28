@@ -42,6 +42,7 @@ void main()
 	}
 	else
 	{
+		// Convert the data
 		float pressure = ((data[2] * 65536) + ((data[1] * 256) + data[0])) / 4096.0;
 
 		// Output data to screen
